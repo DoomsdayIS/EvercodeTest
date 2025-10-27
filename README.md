@@ -44,3 +44,26 @@ python main.py
 
 ## Формат выходных данных
 
+### JSON
+Пример: [`assets.json`](./assets.json)
+
+### CSV
+Пример: [`assets.csv`](./assets.csv)
+
+## Приоритетность добавления полученных активов
+
+Можно реализовать приорететность активов по следующим параметрам:
+
+- Наличие торгов на целевых биржах (Binance, Bybit, KuCoin)
+- Объем торгов
+- Доступность на популярных сетях (Ethereum, BNB Chain, Solana)
+- Дата выхода на рынок (можно получить по каждому конкретному активу через api CoinGecko)
+
+```python
+priority_score = (
+    target_exchanges_count * 10 +  # 0-30 баллов
+    volume_rank_bonus +             # 0-10 баллов
+    platforms_count * 2 +           # 0-20 баллов
+    recency_bonus                   # 0-5 баллов
+)
+```

@@ -58,7 +58,7 @@ def get_platforms_for_asset(asset_id: str) -> list[str] | None:
 
 if __name__ == "__main__":
     assets = []
-    top_100_assets_by_volume = cg_client.get_coins_list(per_page=10).json()
+    top_100_assets_by_volume = cg_client.get_coins_list().json()
     if not top_100_assets_by_volume:
         raise Exception("Can't get top 100 assets by volume")
     for asset in top_100_assets_by_volume:

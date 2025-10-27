@@ -1,0 +1,5 @@
+TARGET_MARKETS = {'Binance', 'Bybit', 'KuCoin'}
+
+DEFAULT_TIMEOUT = 5.0
+READ_TIMEOUT = 10.0
+MAX_ATTEMPTS = 3

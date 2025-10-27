@@ -8,7 +8,7 @@
 ## Установка
 ```bash
 # Клонирование репозитория
-git clone https://github.com/your-username/coingecko-analyzer.git
+git clone https://github.com/DoomsdayIS/EvercodeTest.git
 cd coingecko-analyzer
 
 # Создание виртуального окружения
@@ -67,3 +67,4 @@ priority_score = (
     recency_bonus                   # 0-5 баллов
 )
 ```
+
